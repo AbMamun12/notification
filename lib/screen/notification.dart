@@ -64,6 +64,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       final title = message.notification?.title ?? "N/A";
       final body = message.notification?.body ?? "N/A";
 
+
       Navigator.push(
         context,
         MaterialPageRoute(
