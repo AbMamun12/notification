@@ -86,12 +86,13 @@ class NotificationService {
     );
 
     // Show notification
-    await flutterLocalNotificationsPlugin.show(
-      0, // Notification ID
+    flutterLocalNotificationsPlugin.show(
+      DateTime.now().millisecondsSinceEpoch ~/ 1000,
       title,
       body,
       notificationDetails,
     );
+
   }
 
   /// Initializes the local notification system (both Android and iOS)
